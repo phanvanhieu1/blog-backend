@@ -1,0 +1,65 @@
+
+//REGISTER
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "phanvanhieu111@gmail.com",
+  "userName": "phanvanhieu111",
+  "password": "123456",
+  "age":18,
+  "gender":"nam"
+}
+
+//LOGIN
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "phanvanhieu111@gmail.com",
+    "password": "123456"
+}
+
+//POST bai viet
+###
+POST http://localhost:3000/api/posts/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmFkODE4ZTNkNjc3YzM2YmM5ZDhmNDIiLCJpYXQiOjE2NTU1MzgwNzB9.XU26MGN3TgtoRP6V_4p23TnVxEGY01qXgyXhbaCoz-4
+
+{
+  "title": "title11",
+  "description": "description",
+  "content": "content",
+  "status": "public"
+}
+
+###
+PUT http://localhost:3000/api/posts/update-post/62ad81b23d677c36bc9d8f45
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmFkODE4ZTNkNjc3YzM2YmM5ZDhmNDIiLCJpYXQiOjE2NTU1NTc0NDJ9.MQ13-0kR8NCOgkVraotHICPiUR62SdyW50xKsCsBjJ0
+
+  
+  {
+    "title": "title2",
+    "description": "description",
+    "content": "content",
+    "status": "public"
+  }
+
+
+###
+DELETE http://localhost:3000/api/posts/delete-post/62ad81b23d677c36bc9d8f45
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmFkODE4ZTNkNjc3YzM2YmM5ZDhmNDIiLCJpYXQiOjE2NTU1NTc0NDJ9.MQ13-0kR8NCOgkVraotHICPiUR62SdyW50xKsCsBjJ0
+
+###
+PUT http://localhost:3000/api/users/update-user/62ad818e3d677c36bc9d8f42
+Content-Type: application/json  
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmFkODE4ZTNkNjc3YzM2YmM5ZDhmNDIiLCJpYXQiOjE2NTU1NTkwNDF9.Ex2iQGbZT1qwWF1USKlXsRCzlDjs6a4M7MkmYc5uzqE
+{
+  "email": "phanvanhieu111@gmail.com",
+  "userName": "phanvanhieu111",
+  "password": "123456",
+  "age":18,
+  "gender":"nu"
+}
